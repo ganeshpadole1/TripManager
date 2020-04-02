@@ -13,13 +13,16 @@ class TripsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.dataSource = self
         
         TripFunctions.readTrips { [weak self] in
             self?.tableView.reloadData()
         }
     }
+    
+
+    
 }
 
 extension TripsViewController: UITableViewDataSource {
