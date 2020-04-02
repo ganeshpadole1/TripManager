@@ -16,6 +16,7 @@
 		3058C9A52433A85200D34A28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3058C9A32433A85200D34A28 /* LaunchScreen.storyboard */; };
 		30CBE0CA24365381008181EF /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0C924365381008181EF /* TripModel.swift */; };
 		30CBE0CC2436538A008181EF /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0CB2436538A008181EF /* TripFunctions.swift */; };
+		30CBE0CE2436577B008181EF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0CD2436577B008181EF /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3058C9A62433A85200D34A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30CBE0C924365381008181EF /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		30CBE0CB2436538A008181EF /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
+		30CBE0CD2436577B008181EF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		30CBE0C72436536A008181EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30CBE0CD2436577B008181EF /* Data.swift */,
 				30CBE0C824365374008181EF /* Trip */,
 			);
 			path = Model;
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30CBE0CE2436577B008181EF /* Data.swift in Sources */,
 				3058C99A2433A85000D34A28 /* ViewController.swift in Sources */,
 				3058C9962433A85000D34A28 /* AppDelegate.swift in Sources */,
 				30CBE0CC2436538A008181EF /* TripFunctions.swift in Sources */,
