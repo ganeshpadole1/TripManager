@@ -13,6 +13,11 @@
 		3058C9A02433A85000D34A28 /* TripManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3058C99E2433A85000D34A28 /* TripManager.xcdatamodeld */; };
 		3058C9A22433A85200D34A28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3058C9A12433A85200D34A28 /* Assets.xcassets */; };
 		3058C9A52433A85200D34A28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3058C9A32433A85200D34A28 /* LaunchScreen.storyboard */; };
+		308A6FCC243892EB000C0A55 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A6FCB243892EB000C0A55 /* TripsTableViewCell.swift */; };
+		308A6FCF24389B3A000C0A55 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A6FCE24389B3A000C0A55 /* UIViewExtensions.swift */; };
+		308A6FD224389F0D000C0A55 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A6FD124389F0D000C0A55 /* Theme.swift */; };
+		308A6FD424389F40000C0A55 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 308A6FD324389F40000C0A55 /* FugazOne-Regular.ttf */; };
+		308A6FD62438A4C3000C0A55 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308A6FD52438A4C3000C0A55 /* Colors.xcassets */; };
 		30CBE0CA24365381008181EF /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0C924365381008181EF /* TripModel.swift */; };
 		30CBE0CC2436538A008181EF /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0CB2436538A008181EF /* TripFunctions.swift */; };
 		30CBE0CE2436577B008181EF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0CD2436577B008181EF /* Data.swift */; };
@@ -29,6 +34,11 @@
 		3058C9A12433A85200D34A28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3058C9A42433A85200D34A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3058C9A62433A85200D34A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308A6FCB243892EB000C0A55 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		308A6FCE24389B3A000C0A55 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		308A6FD124389F0D000C0A55 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		308A6FD324389F40000C0A55 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
+		308A6FD52438A4C3000C0A55 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		30CBE0C924365381008181EF /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		30CBE0CB2436538A008181EF /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		30CBE0CD2436577B008181EF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -66,6 +76,8 @@
 		3058C9942433A85000D34A28 /* TripManager */ = {
 			isa = PBXGroup;
 			children = (
+				308A6FD024389EFE000C0A55 /* Resources */,
+				308A6FCD24389B0C000C0A55 /* Extensions */,
 				30CBE0CF24365F10008181EF /* Views */,
 				30CBE0C72436536A008181EF /* Model */,
 				3058C9952433A85000D34A28 /* AppDelegate.swift */,
@@ -77,6 +89,24 @@
 				3058C99E2433A85000D34A28 /* TripManager.xcdatamodeld */,
 			);
 			path = TripManager;
+			sourceTree = "<group>";
+		};
+		308A6FCD24389B0C000C0A55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				308A6FCE24389B3A000C0A55 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		308A6FD024389EFE000C0A55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				308A6FD124389F0D000C0A55 /* Theme.swift */,
+				308A6FD324389F40000C0A55 /* FugazOne-Regular.ttf */,
+				308A6FD52438A4C3000C0A55 /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		30CBE0C72436536A008181EF /* Model */ = {
@@ -110,6 +140,7 @@
 			children = (
 				30CBE0D124365F54008181EF /* TripsViewController.storyboard */,
 				30CBE0D324365F73008181EF /* TripsViewController.swift */,
+				308A6FCB243892EB000C0A55 /* TripsTableViewCell.swift */,
 			);
 			path = TripsViewController;
 			sourceTree = "<group>";
@@ -172,8 +203,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308A6FD62438A4C3000C0A55 /* Colors.xcassets in Resources */,
 				3058C9A52433A85200D34A28 /* LaunchScreen.storyboard in Resources */,
 				3058C9A22433A85200D34A28 /* Assets.xcassets in Resources */,
+				308A6FD424389F40000C0A55 /* FugazOne-Regular.ttf in Resources */,
 				30CBE0D224365F54008181EF /* TripsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,11 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308A6FCC243892EB000C0A55 /* TripsTableViewCell.swift in Sources */,
 				30CBE0CE2436577B008181EF /* Data.swift in Sources */,
 				3058C99A2433A85000D34A28 /* ViewController.swift in Sources */,
 				3058C9962433A85000D34A28 /* AppDelegate.swift in Sources */,
+				308A6FD224389F0D000C0A55 /* Theme.swift in Sources */,
 				30CBE0CC2436538A008181EF /* TripFunctions.swift in Sources */,
 				3058C9A02433A85000D34A28 /* TripManager.xcdatamodeld in Sources */,
+				308A6FCF24389B3A000C0A55 /* UIViewExtensions.swift in Sources */,
 				30CBE0D424365F73008181EF /* TripsViewController.swift in Sources */,
 				30CBE0CA24365381008181EF /* TripModel.swift in Sources */,
 				3058C9982433A85000D34A28 /* SceneDelegate.swift in Sources */,
