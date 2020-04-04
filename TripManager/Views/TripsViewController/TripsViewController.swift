@@ -11,6 +11,8 @@ import UIKit
 class TripsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var addButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,13 @@ class TripsViewController: UIViewController {
         TripFunctions.readTrips { [weak self] in
             self?.tableView.reloadData()
         }
+        
+        let origImage = UIImage(named: "addButton")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        addButton.setImage(tintedImage, for: .normal)
+        addButton.tintColor = .white
+        
+        addButton.createFloatingActionButton()
     }
 }
 

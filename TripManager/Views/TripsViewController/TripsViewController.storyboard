@@ -70,6 +70,7 @@
                         <viewLayoutGuide key="safeArea" id="CeS-QS-wHd"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="37g-gU-wGr" id="Bvw-Qt-28l"/>
                         <outlet property="tableView" destination="4jo-ZO-yVb" id="8Sl-0a-I3h"/>
                     </connections>
                 </viewController>
@@ -79,6 +80,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addButton" width="112" height="112"/>
+        <image name="addButton" width="84" height="84"/>
     </resources>
 </document>
