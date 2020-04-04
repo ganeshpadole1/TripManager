@@ -49,6 +49,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37g-gU-wGr">
+                                <rect key="frame" x="348" y="796" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="kRq-3n-hJp"/>
+                                    <constraint firstAttribute="height" constant="56" id="mKY-mE-maY"/>
+                                </constraints>
+                                <state key="normal" image="addButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -56,6 +64,8 @@
                             <constraint firstItem="4jo-ZO-yVb" firstAttribute="trailing" secondItem="CeS-QS-wHd" secondAttribute="trailing" id="PUd-Ny-OnL"/>
                             <constraint firstItem="4jo-ZO-yVb" firstAttribute="leading" secondItem="CeS-QS-wHd" secondAttribute="leading" id="aQZ-FN-JSU"/>
                             <constraint firstAttribute="bottom" secondItem="4jo-ZO-yVb" secondAttribute="bottom" constant="20" symbolic="YES" id="kOi-w2-PVO"/>
+                            <constraint firstItem="CeS-QS-wHd" firstAttribute="bottom" secondItem="37g-gU-wGr" secondAttribute="bottom" constant="10" id="vG2-xA-90b"/>
+                            <constraint firstItem="CeS-QS-wHd" firstAttribute="trailing" secondItem="37g-gU-wGr" secondAttribute="trailing" constant="10" id="vsV-AZ-V7m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CeS-QS-wHd"/>
                     </view>
@@ -68,4 +78,7 @@
             <point key="canvasLocation" x="-425" y="390"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addButton" width="112" height="112"/>
+    </resources>
 </document>
