@@ -80,6 +80,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addButton" width="84" height="84"/>
+        <image name="addButton" width="64" height="64"/>
     </resources>
 </document>
