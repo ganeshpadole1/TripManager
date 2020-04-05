@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +19,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQX-yi-1Ic" customClass="PopupUIView" customModule="TripManager" customModuleProvider="target">
                                 <rect key="frame" x="20" y="54" width="374" height="160"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uN8-FY-m9f">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwf-Bq-Gyu">
-                                        <rect key="frame" x="17" y="8" width="349" height="40"/>
+                                        <rect key="frame" x="17" y="8" width="264" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -49,6 +54,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-Sv-8L2">
+                                        <rect key="frame" x="309" y="4" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="Tint"/>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="cameraPhot:" destination="SWU-6Y-sSa" eventType="touchUpInside" id="jfX-kY-xss"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -67,7 +81,9 @@
                     <connections>
                         <outlet property="addTripLabel" destination="uwf-Bq-Gyu" id="aUP-Hr-BT5"/>
                         <outlet property="addTripTextField" destination="2qB-Fh-tZs" id="nSZ-20-5ND"/>
+                        <outlet property="cameraButton" destination="cMD-Sv-8L2" id="psv-fu-dlg"/>
                         <outlet property="cancelButton" destination="x1u-EK-XVK" id="8kF-uo-MSg"/>
+                        <outlet property="imageView" destination="uN8-FY-m9f" id="3HL-lC-5u2"/>
                         <outlet property="saveButton" destination="Ghm-P9-Efu" id="Slh-iq-yVw"/>
                     </connections>
                 </viewController>
@@ -76,4 +92,11 @@
             <point key="canvasLocation" x="327.536231884058" y="389.73214285714283"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="84" height="84"/>
+        <namedColor name="Tint">
+            <color red="1" green="0.24300000071525574" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" name="Tint"/>
 </document>

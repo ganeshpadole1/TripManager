@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Photos
 
 class AddTripViewController: UIViewController {
     
+    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var addTripLabel: UILabel!
     @IBOutlet weak var addTripTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     var doneSaving: (() -> ())? //callback function
     
@@ -21,6 +24,13 @@ class AddTripViewController: UIViewController {
         super.viewDidLoad()
         
         addTripLabel.font = UIFont(name: Theme.mainFontName, size: 24)
+        imageView.layer.cornerRadius = 10
+        
+        //dropshadow on title
+        addTripLabel.layer.shadowOpacity = 1
+        addTripLabel.layer.shadowColor = UIColor.white.cgColor
+        addTripLabel.layer.shadowOffset = CGSize.zero
+        addTripLabel.layer.shadowRadius = 5
     }
     
     @IBAction func cancel(_ sender: UIButton) {
@@ -57,5 +67,75 @@ class AddTripViewController: UIViewController {
             doneSaving()
         }
         dismiss(animated: true)
+    }
+    
+    fileprivate func presentPhotoPicker() {
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = .photoLibrary
+        self.present(myPickerController, animated: true)
+    }
+    
+    @IBAction func cameraPhot(_ sender: UIButton) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            PHPhotoLibrary.requestAuthorization { (status) in
+                switch status {
+                case .authorized:
+                    DispatchQueue.main.async {
+                        self.presentPhotoPicker()
+                    }
+                case .notDetermined:
+                    if status == PHAuthorizationStatus.authorized {
+                      //  DispatchQueue.main.async {
+                            self.presentPhotoPicker()
+                        //}
+                    }
+                case .restricted:
+                    let alertController = UIAlertController(title: "Photo Library Access Restricted", message: "Photo Library access is restricted and cannot be accessed.", preferredStyle: .alert )
+                    let okButton = UIAlertAction(title: "OK", style: .default)
+                    alertController.addAction(okButton)
+                    self.present(alertController, animated: true, completion: nil)
+                case .denied:
+                    print("")
+//                    let alertController = UIAlertController(title: "Photo Library Restricted", message: "Photo Library access was previously denied. Please update your Settings if you want to change this.", preferredStyle: .alert )
+//                    let gotoSettingsAction = UIAlertAction(title: "Go to Settings", style: .default) {
+//                        (action) in
+//
+////                        DispatchQueue.global(qos: .background).async {
+////                           // DispatchQueue.main.async {
+////                                let url = URL(string: UIApplication.openSettingsURLString)!
+////                                UIApplication.shared.open(url, options: [:])
+////                            //}
+////                        }
+//
+//                    }
+//                    let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+//                    alertController.addAction(gotoSettingsAction)
+//                    alertController.addAction(cancelButton)
+//                    self.present(alertController, animated: true, completion: nil)
+                @unknown default:
+                    print("future case")
+                }
+            }
+        }
+        
+    }
+    
+}
+
+extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage {
+            self.imageView.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
