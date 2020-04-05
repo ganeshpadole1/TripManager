@@ -32,6 +32,15 @@ class TripsViewController: UIViewController {
         
         addButton.createFloatingActionButton()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddTripSegue" {
+            let popUpView = segue.destination as! AddTripViewController
+            popUpView.doneSaving = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
 }
 
 extension TripsViewController: UITableViewDataSource {

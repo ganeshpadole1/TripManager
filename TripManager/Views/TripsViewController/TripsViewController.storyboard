@@ -57,7 +57,7 @@
                                 </constraints>
                                 <state key="normal" image="addButton"/>
                                 <connections>
-                                    <segue destination="n6G-dP-D4I" kind="presentation" id="K43-gO-Jca"/>
+                                    <segue destination="n6G-dP-D4I" kind="presentation" identifier="toAddTripSegue" id="K43-gO-Jca"/>
                                 </connections>
                             </button>
                         </subviews>
