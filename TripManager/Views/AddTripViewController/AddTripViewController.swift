@@ -9,7 +9,7 @@
 import UIKit
 
 class AddTripViewController: UIViewController {
-  
+    
     @IBOutlet weak var addTripLabel: UILabel!
     @IBOutlet weak var addTripTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
@@ -19,7 +19,7 @@ class AddTripViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         addTripLabel.font = UIFont(name: Theme.mainFontName, size: 24)
     }
     
@@ -30,7 +30,29 @@ class AddTripViewController: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         
-        TripFunctions.createTrip(tripModel: TripModel(title: addTripTextField.text!))
+        addTripTextField.rightViewMode = .never
+        
+        guard addTripTextField.text != "", let newTripName = addTripTextField.text else {
+            //            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
+            //            imageView.image = #imageLiteral(resourceName: "warningImage")
+            //            imageView.contentMode = .scaleAspectFit
+            //            addTripTextField.rightView = imageView
+            
+            //alternative
+            //addTripTextField.backgroundColor = .red
+            
+            addTripTextField.layer.borderColor = UIColor.red.cgColor
+            addTripTextField.layer.borderWidth = 2
+            addTripTextField.layer.cornerRadius = 5
+            addTripTextField.placeholder = "Trip name required"
+            
+            addTripTextField.rightViewMode = .always
+            
+            return
+        }
+        
+        
+        TripFunctions.createTrip(tripModel: TripModel(title: newTripName))
         if let doneSaving = doneSaving {
             doneSaving()
         }
