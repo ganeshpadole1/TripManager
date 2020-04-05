@@ -19,7 +19,7 @@ class TripsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        view.backgroundColor = Theme.background
+        view.backgroundColor = Theme.backgroundColor
         
         TripFunctions.readTrips { [weak self] in
             self?.tableView.reloadData()

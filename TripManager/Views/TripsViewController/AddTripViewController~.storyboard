@@ -50,14 +50,14 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37g-gU-wGr">
-                                <rect key="frame" x="343" y="796" width="56" height="56"/>
+                                <rect key="frame" x="348" y="796" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="kRq-3n-hJp"/>
                                     <constraint firstAttribute="height" constant="56" id="mKY-mE-maY"/>
                                 </constraints>
                                 <state key="normal" image="addButton"/>
                                 <connections>
-                                    <segue destination="n6G-dP-D4I" kind="presentation" id="K43-gO-Jca"/>
+                                    <segue destination="SWU-6Y-sSa" kind="presentation" id="K43-gO-Jca"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,7 +68,7 @@
                             <constraint firstItem="4jo-ZO-yVb" firstAttribute="leading" secondItem="CeS-QS-wHd" secondAttribute="leading" id="aQZ-FN-JSU"/>
                             <constraint firstAttribute="bottom" secondItem="4jo-ZO-yVb" secondAttribute="bottom" constant="20" symbolic="YES" id="kOi-w2-PVO"/>
                             <constraint firstItem="CeS-QS-wHd" firstAttribute="bottom" secondItem="37g-gU-wGr" secondAttribute="bottom" constant="10" id="vG2-xA-90b"/>
-                            <constraint firstItem="CeS-QS-wHd" firstAttribute="trailing" secondItem="37g-gU-wGr" secondAttribute="trailing" constant="15" id="vsV-AZ-V7m"/>
+                            <constraint firstItem="CeS-QS-wHd" firstAttribute="trailing" secondItem="37g-gU-wGr" secondAttribute="trailing" constant="10" id="vsV-AZ-V7m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CeS-QS-wHd"/>
                     </view>
@@ -81,11 +81,18 @@
             </objects>
             <point key="canvasLocation" x="-425" y="390"/>
         </scene>
-        <!--AddTripViewController-->
-        <scene sceneID="DNu-88-aEN">
+        <!--View Controller-->
+        <scene sceneID="VRn-J7-dRg">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddTripViewController" id="n6G-dP-D4I" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ppy-GG-HlC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="SWU-6Y-sSa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MvU-aA-eHs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2Mz-dt-gEs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEi-0c-Tgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="329" y="390"/>
         </scene>
