@@ -61,4 +61,35 @@ extension TripsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let trip = Data.tripModels[indexPath.row]
+        
+        
+        
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
+            
+            let alertController = UIAlertController(title: "Delete Trip?", message: "Are you sure you want to delete this trip: \(trip.title)", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alertAction) in
+                actionPerformed(false)
+            }
+            
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (alertAction) in
+                TripFunctions.deleteTrip(index: indexPath.row)
+                actionPerformed(true)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(deleteAction)
+            
+            self.present(alertController, animated: true)
+          }
+        deleteAction.image = #imageLiteral(resourceName: "delete")
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
