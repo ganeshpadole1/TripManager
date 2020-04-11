@@ -37,6 +37,7 @@ class AddTripViewController: UIViewController {
             let trip = Data.tripModels[index]
             addTripTextField.text = trip.title
             imageView.image = trip.image
+            addTripLabel.text = "Edit Trip"
         }
     }
     
@@ -81,6 +82,7 @@ class AddTripViewController: UIViewController {
     
     fileprivate func presentPhotoPicker() {
         let myPickerController = UIImagePickerController()
+        myPickerController.allowsEditing = true
         myPickerController.delegate = self
         myPickerController.sourceType = .photoLibrary
         self.present(myPickerController, animated: true)
@@ -138,7 +140,9 @@ extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationCo
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[.originalImage] as? UIImage {
+        if let editedImage = info[.editedImage] as? UIImage {
+            self.imageView.image = editedImage
+        } else if let image = info[.originalImage] as? UIImage {
             self.imageView.image = image
         }
         
