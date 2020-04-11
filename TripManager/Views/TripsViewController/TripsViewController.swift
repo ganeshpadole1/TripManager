@@ -10,8 +10,8 @@ import UIKit
 
 class TripsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var addButton: UIButton!
+    var indexToEditTrip: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class TripsViewController: UIViewController {
             self?.tableView.reloadData()
         }
         
-        let origImage = UIImage(named: "addButton")
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        let origanalImage = UIImage(named: "addButton")
+        let tintedImage = origanalImage?.withRenderingMode(.alwaysTemplate)
         addButton.setImage(tintedImage, for: .normal)
         addButton.tintColor = .white
         
@@ -36,6 +36,7 @@ class TripsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTripSegue" {
             let popUpView = segue.destination as! AddTripViewController
+            popUpView.indexToEditTrip = indexToEditTrip
             popUpView.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
@@ -65,10 +66,7 @@ extension TripsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let trip = Data.tripModels[indexPath.row]
-        
-        
-        
-        
+         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
             
             let alertController = UIAlertController(title: "Delete Trip?", message: "Are you sure you want to delete this trip: \(trip.title)", preferredStyle: .alert)
@@ -91,5 +89,18 @@ extension TripsViewController: UITableViewDelegate {
         deleteAction.image = #imageLiteral(resourceName: "delete")
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
+            actionPerformed(true)
+            self.indexToEditTrip = indexPath.row
+            self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
+        }
+        
+        editAction.image = #imageLiteral(resourceName: "EditImage")
+        editAction.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+        return UISwipeActionsConfiguration(actions: [editAction])
     }
 }

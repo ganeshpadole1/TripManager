@@ -25,5 +25,15 @@ class TripsTableViewCell: UITableViewCell {
     func setupCell(tripModel: TripModel) {
         self.titleLabel.text = tripModel.title
         self.tripImageView.image = tripModel.image
+        
+        if let tripImage = tripModel.image {
+            tripImageView.alpha = 0.3
+            tripImageView.image = tripImage
+            
+            UIView.animate(withDuration: 1) {
+                self.tripImageView.image = tripImage
+                self.tripImageView.alpha = 1
+            }
+        }
     }
 }

@@ -19,6 +19,7 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var doneSaving: (() -> ())? //callback function
+    var indexToEditTrip: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,17 @@ class AddTripViewController: UIViewController {
         addTripLabel.font = UIFont(name: Theme.mainFontName, size: 24)
         imageView.layer.cornerRadius = 10
         
-        //dropshadow on title
+        //dropShadow on title
         addTripLabel.layer.shadowOpacity = 1
         addTripLabel.layer.shadowColor = UIColor.white.cgColor
         addTripLabel.layer.shadowOffset = CGSize.zero
         addTripLabel.layer.shadowRadius = 5
+        
+        if let index = indexToEditTrip {
+            let trip = Data.tripModels[index]
+            addTripTextField.text = trip.title
+            imageView.image = trip.image
+        }
     }
     
     @IBAction func cancel(_ sender: UIButton) {
@@ -55,14 +62,17 @@ class AddTripViewController: UIViewController {
             addTripTextField.layer.borderWidth = 2
             addTripTextField.layer.cornerRadius = 5
             addTripTextField.placeholder = "Trip name required"
-            
             addTripTextField.rightViewMode = .always
             
             return
         }
         
-        
-        TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        if let index = indexToEditTrip { //Edit trip
+            TripFunctions.updateTrip(index: index, title: newTripName, image: imageView.image)
+        } else {
+            TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
+        }
+         
         if let doneSaving = doneSaving {
             doneSaving()
         }

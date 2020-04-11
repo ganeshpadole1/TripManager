@@ -14,8 +14,8 @@
             filePath = "TripManager/Views/AddTripViewController/AddTripViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "cameraPhot(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,9 +30,9 @@
             filePath = "TripManager/Views/AddTripViewController/AddTripViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "cameraPhot(_:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "presentPhotoPicker()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,8 +46,8 @@
             filePath = "TripManager/Views/AddTripViewController/AddTripViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "cameraPhot(_:)"
             landmarkType = "7">
          </BreakpointContent>
