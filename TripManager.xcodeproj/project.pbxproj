@@ -23,11 +23,18 @@
 		308A6FDF2438C88A000C0A55 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A6FDE2438C88A000C0A55 /* AddTripViewController.swift */; };
 		3092663C243A007F00EF5FC8 /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092663B243A007F00EF5FC8 /* PopupUIView.swift */; };
 		3092663E243A01C000EF5FC8 /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092663D243A01C000EF5FC8 /* AppUIButton.swift */; };
+		30B7EDE724424B5900EDA603 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7EDE624424B5900EDA603 /* DayModel.swift */; };
+		30B7EDE924424C4B00EDA603 /* ActivityModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7EDE824424C4B00EDA603 /* ActivityModels.swift */; };
+		30B7EDEB24424DAC00EDA603 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7EDEA24424DAC00EDA603 /* ActivityTypeEnum.swift */; };
+		30B7EDED2442502500EDA603 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7EDEC2442502500EDA603 /* MockData.swift */; };
+		30B7EDF02442522900EDA603 /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B7EDEF2442522900EDA603 /* ActivitiesViewController.storyboard */; };
+		30B7EDF22442527700EDA603 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7EDF12442527700EDA603 /* ActivitiesViewController.swift */; };
 		30CBE0CA24365381008181EF /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0C924365381008181EF /* TripModel.swift */; };
 		30CBE0CC2436538A008181EF /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0CB2436538A008181EF /* TripFunctions.swift */; };
 		30CBE0CE2436577B008181EF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0CD2436577B008181EF /* Data.swift */; };
 		30CBE0D224365F54008181EF /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CBE0D124365F54008181EF /* TripsViewController.storyboard */; };
 		30CBE0D424365F73008181EF /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0D324365F73008181EF /* TripsViewController.swift */; };
+		30E0C64A2442F6EE00FEA734 /* ganesh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E0C6492442F6EE00FEA734 /* ganesh.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +56,18 @@
 		308A6FDE2438C88A000C0A55 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		3092663B243A007F00EF5FC8 /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		3092663D243A01C000EF5FC8 /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
+		30B7EDE624424B5900EDA603 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		30B7EDE824424C4B00EDA603 /* ActivityModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModels.swift; sourceTree = "<group>"; };
+		30B7EDEA24424DAC00EDA603 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
+		30B7EDEC2442502500EDA603 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		30B7EDEF2442522900EDA603 /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
+		30B7EDF12442527700EDA603 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		30CBE0C924365381008181EF /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		30CBE0CB2436538A008181EF /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		30CBE0CD2436577B008181EF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		30CBE0D124365F54008181EF /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		30CBE0D324365F73008181EF /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		30E0C6492442F6EE00FEA734 /* ganesh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ganesh.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +126,7 @@
 		308A6FD024389EFE000C0A55 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30E0C6492442F6EE00FEA734 /* ganesh.jpg */,
 				3092663A243A003F00EF5FC8 /* CustomControls */,
 				308A6FCD24389B0C000C0A55 /* Extensions */,
 				308A6FD124389F0D000C0A55 /* Theme.swift */,
@@ -139,11 +154,40 @@
 			path = CustomControls;
 			sourceTree = "<group>";
 		};
+		30B7EDE424424AE700EDA603 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				30B7EDE624424B5900EDA603 /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		30B7EDE524424AF800EDA603 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				30B7EDE824424C4B00EDA603 /* ActivityModels.swift */,
+				30B7EDEA24424DAC00EDA603 /* ActivityTypeEnum.swift */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		30B7EDEE244251F500EDA603 /* ActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30B7EDEF2442522900EDA603 /* ActivitiesViewController.storyboard */,
+				30B7EDF12442527700EDA603 /* ActivitiesViewController.swift */,
+			);
+			path = ActivitiesViewController;
+			sourceTree = "<group>";
+		};
 		30CBE0C72436536A008181EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				30CBE0CD2436577B008181EF /* Data.swift */,
+				30B7EDEC2442502500EDA603 /* MockData.swift */,
 				30CBE0C824365374008181EF /* Trip */,
+				30B7EDE424424AE700EDA603 /* Day */,
+				30B7EDE524424AF800EDA603 /* Activities */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +204,7 @@
 		30CBE0CF24365F10008181EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30B7EDEE244251F500EDA603 /* ActivitiesViewController */,
 				308A6FDD2438C859000C0A55 /* AddTripViewController */,
 				30CBE0D024365F1B008181EF /* TripsViewController */,
 			);
@@ -237,9 +282,11 @@
 				308A6FDC2438C84A000C0A55 /* AddTripViewController.storyboard in Resources */,
 				308A6FD62438A4C3000C0A55 /* Colors.xcassets in Resources */,
 				3058C9A52433A85200D34A28 /* LaunchScreen.storyboard in Resources */,
+				30B7EDF02442522900EDA603 /* ActivitiesViewController.storyboard in Resources */,
 				3058C9A22433A85200D34A28 /* Assets.xcassets in Resources */,
 				308A6FD424389F40000C0A55 /* FugazOne-Regular.ttf in Resources */,
 				30CBE0D224365F54008181EF /* TripsViewController.storyboard in Resources */,
+				30E0C64A2442F6EE00FEA734 /* ganesh.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +304,18 @@
 				30CBE0CE2436577B008181EF /* Data.swift in Sources */,
 				3058C99A2433A85000D34A28 /* ViewController.swift in Sources */,
 				3058C9962433A85000D34A28 /* AppDelegate.swift in Sources */,
+				30B7EDEB24424DAC00EDA603 /* ActivityTypeEnum.swift in Sources */,
+				30B7EDED2442502500EDA603 /* MockData.swift in Sources */,
 				308A6FD224389F0D000C0A55 /* Theme.swift in Sources */,
+				30B7EDE724424B5900EDA603 /* DayModel.swift in Sources */,
 				308A6FD82438BCF7000C0A55 /* UIButtonExtension.swift in Sources */,
 				30CBE0CC2436538A008181EF /* TripFunctions.swift in Sources */,
 				3058C9A02433A85000D34A28 /* TripManager.xcdatamodeld in Sources */,
 				308A6FCF24389B3A000C0A55 /* UIViewExtensions.swift in Sources */,
 				30CBE0D424365F73008181EF /* TripsViewController.swift in Sources */,
 				30CBE0CA24365381008181EF /* TripModel.swift in Sources */,
+				30B7EDF22442527700EDA603 /* ActivitiesViewController.swift in Sources */,
+				30B7EDE924424C4B00EDA603 /* ActivityModels.swift in Sources */,
 				3058C9982433A85000D34A28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

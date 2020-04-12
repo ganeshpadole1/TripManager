@@ -25,8 +25,8 @@ class TripsViewController: UIViewController {
             self?.tableView.reloadData()
         }
         
-        let origanalImage = UIImage(named: "addButton")
-        let tintedImage = origanalImage?.withRenderingMode(.alwaysTemplate)
+        let originalImage = UIImage(named: "addButton")
+        let tintedImage = originalImage?.withRenderingMode(.alwaysTemplate)
         addButton.setImage(tintedImage, for: .normal)
         addButton.tintColor = .white
         
@@ -103,5 +103,14 @@ extension TripsViewController: UITableViewDelegate {
         editAction.image = #imageLiteral(resourceName: "EditImage")
         editAction.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
         return UISwipeActionsConfiguration(actions: [editAction])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip = Data.tripModels[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
+        vc.tripId = trip.id
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
