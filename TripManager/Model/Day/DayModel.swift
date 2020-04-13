@@ -12,9 +12,9 @@ struct DayModel {
     var id: String!
     var title = ""
     var subtitle = ""
-    var activityModels = [ActivityModels]()
+    var activityModels = [ActivityModel]()
     
-    init(title: String, subtitle: String, activityModels: [ActivityModels]?) {
+    init(title: String, subtitle: String, activityModels: [ActivityModel]?) {
         id = UUID().uuidString
         self.title = title
         self.subtitle = subtitle

@@ -12,6 +12,8 @@ class ActivitiesViewController: UIViewController {
     
     var tripId: UUID!
     var tripModel: TripModel?
+    var sectionHeaderHeight: CGFloat = 0.0
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
       
@@ -19,6 +21,7 @@ class ActivitiesViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
         
         TripFunctions.readTrip(by: tripId) { [weak self] (model) in
             
@@ -29,25 +32,22 @@ class ActivitiesViewController: UIViewController {
             self.backgroundImageView.image = self.tripModel?.image
             self.tableView.reloadData()
         }
+        
+        sectionHeaderHeight = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")?.contentView.bounds.height ?? 0.0 // initially get height for header
     }
    
 }
 
-extension ActivitiesViewController: UITableViewDataSource {
+extension ActivitiesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tripModel?.dayModels[section].activityModels.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
-        
-        cell?.textLabel?.text = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row].title
-        
+        let activityModel = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ActivityTableViewCell
+        cell.setup(model: activityModel!)
         return UITableViewCell(style: .default, reuseIdentifier: "cell")
     }
     
@@ -55,10 +55,16 @@ extension ActivitiesViewController: UITableViewDataSource {
         return tripModel?.dayModels.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let title = tripModel?.dayModels[section].title ?? ""
-        let subtitle = tripModel?.dayModels[section].subtitle ?? ""
-        
-        return "\(title) - \(subtitle)"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let model = tripModel?.dayModels[section]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! HeaderTableViewCell
+        cell.setup(dayModel: model!)
+        return cell.contentView
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+       
+        return sectionHeaderHeight
+    }
+
 }

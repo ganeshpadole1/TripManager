@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ActivityModels {
+struct ActivityModel {
     var id: String!
     var title = ""
     var subTitle = ""
