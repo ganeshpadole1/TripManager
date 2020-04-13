@@ -36,6 +36,7 @@
 		30CBE0D224365F54008181EF /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CBE0D124365F54008181EF /* TripsViewController.storyboard */; };
 		30CBE0D424365F73008181EF /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBE0D324365F73008181EF /* TripsViewController.swift */; };
 		30D733592444AB4C002D697E /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D733582444AB4C002D697E /* ActivityTableViewCell.swift */; };
+		30D7335B2444E2C0002D697E /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D7335A2444E2C0002D697E /* UITableViewCellExtension.swift */; };
 		30E0C64A2442F6EE00FEA734 /* ganesh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E0C6492442F6EE00FEA734 /* ganesh.jpg */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		30CBE0D124365F54008181EF /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		30CBE0D324365F73008181EF /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		30D733582444AB4C002D697E /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		30D7335A2444E2C0002D697E /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		30E0C6492442F6EE00FEA734 /* ganesh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ganesh.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 			children = (
 				308A6FCE24389B3A000C0A55 /* UIViewExtensions.swift */,
 				308A6FD72438BCF7000C0A55 /* UIButtonExtension.swift */,
+				30D7335A2444E2C0002D697E /* UITableViewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				308A6FCC243892EB000C0A55 /* TripsTableViewCell.swift in Sources */,
 				30D733592444AB4C002D697E /* ActivityTableViewCell.swift in Sources */,
 				30CBE0CE2436577B008181EF /* Data.swift in Sources */,
+				30D7335B2444E2C0002D697E /* UITableViewCellExtension.swift in Sources */,
 				3058C99A2433A85000D34A28 /* ViewController.swift in Sources */,
 				3058C9962433A85000D34A28 /* AppDelegate.swift in Sources */,
 				30B7EDEB24424DAC00EDA603 /* ActivityTypeEnum.swift in Sources */,

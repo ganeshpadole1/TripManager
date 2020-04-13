@@ -52,7 +52,7 @@ extension TripsViewController: UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TripsTableViewCell.identifier) as! TripsTableViewCell
         cell.setupCell(tripModel: Data.tripModels[indexPath.row])
         
         return cell
