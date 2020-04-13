@@ -18,7 +18,7 @@ class TripsViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+        self.title = "Trips"
         view.backgroundColor = Theme.backgroundColor
         
         TripFunctions.readTrips { [weak self] in
@@ -111,6 +111,7 @@ extension TripsViewController: UITableViewDelegate {
         let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
         vc.tripId = trip.id
+        vc.tripTitle = trip.title
         navigationController?.pushViewController(vc, animated: true)
     }
 }

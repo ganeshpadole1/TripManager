@@ -11,6 +11,7 @@ import UIKit
 class ActivitiesViewController: UIViewController {
     
     var tripId: UUID!
+    var tripTitle = ""
     var tripModel: TripModel?
     var sectionHeaderHeight: CGFloat = 0.0
     
@@ -22,13 +23,11 @@ class ActivitiesViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+        self.title = tripTitle
         
         TripFunctions.readTrip(by: tripId) { [weak self] (model) in
-            
-            guard let self = self else {return}
+           guard let self = self else {return}
             self.tripModel = model
-            
-            self.title = self.tripModel?.title
             self.backgroundImageView.image = self.tripModel?.image
             self.tableView.reloadData()
         }
